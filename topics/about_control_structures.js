@@ -6,7 +6,7 @@ test("if", function() {
 	if (2 > 0) {
 		isPositive = true;
 	}
-	equals(isPositive, __,  'what is the value of isPositive?');
+	equals(isPositive, true,  'what is the value of isPositive?');
 });
 
 test("for", function() {
@@ -14,7 +14,7 @@ test("for", function() {
 	for (var i = 1; i <= 3; i++) {
 		counter = counter + i;
 	}
-	equals(counter, __, 'what is the value of counter?');
+	equals(counter, 16, 'what is the value of counter?');
 });
 
 test("for in", function() {
@@ -28,20 +28,20 @@ test("for in", function() {
 	for (property_name in person) {
   result = result + property_name;
 	};
-	equals(result, __, 'what is the value of result?');
+	equals(result, 'nameage', 'what is the value of result?');
 });
 
 test("ternary operator", function() {
 	var fruit = true ? "apple" : "orange";
-	equals(fruit, __, 'what is the value of fruit?');
+	equals(fruit, 'apple', 'what is the value of fruit?');
 
 	fruit = false ? "apple" : "orange";
-	equals(fruit, __, 'now what is the value of fruit?');
+	equals(fruit, 'orange', 'now what is the value of fruit?');
 });
 
 test("switch", function() {
 	var result = 0;
-	switch (2) {
+	switch (90) {
 		case 1:
 			result = 1;
 			break;
@@ -49,11 +49,11 @@ test("switch", function() {
 			result = 2;
 			break;
 	}
-	equals(result, __, 'what is the value of result?');
+	equals(result, 0, 'what is the value of result?');
 });
 
 test("switch default case", function() {
-    var result = "Pippin";
+    var result = "poo";
     switch ("m") {
         case "f":
             result = "Frodo";
@@ -62,13 +62,13 @@ test("switch default case", function() {
             result = "Samwise";
                 break;
         default:
-            result = "Merry";
+            result = "poo";
             break;
     }
-    equals(result, __, 'what is the value of result?');
+    equals(result, 'poo', 'what is the value of result?');
 });
 
 test("null coallescion", function() {
     var result = null || "a value";
-    equals(result, __, 'what is the value of result?');
+    equals(result, 'a value', 'what is the value of result?');
 });
